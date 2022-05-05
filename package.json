@@ -1,0 +1,23 @@
+{
+  "name": "to-do-app-front-end",
+  "version": "0.1.0",
+  "description": "TO-DO list",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build",
+    "watch": "tsc --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DEP-Team-A/to-do-app-front-end.git"
+  },
+  "author": "Dulanga Wimalagunasekara",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DEP-Team-A/to-do-app-front-end/issues"
+  },
+  "homepage": "https://github.com/DEP-Team-A/to-do-app-front-end#readme",
+  "devDependencies": {
+    "parcel": "^2.5.0"
+  }
+}
