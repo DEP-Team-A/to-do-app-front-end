@@ -19,5 +19,8 @@
   "homepage": "https://github.com/DEP-Team-A/to-do-app-front-end#readme",
   "devDependencies": {
     "parcel": "^2.5.0"
+  },
+  "dependencies": {
+    "admin-lte": "^3.2.0"
   }
 }
