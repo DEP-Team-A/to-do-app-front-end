@@ -12,4 +12,9 @@ footer{
     margin-left: 0px !important;
 }
 
-
+html{
+    background-image: url("/src/image/img.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
