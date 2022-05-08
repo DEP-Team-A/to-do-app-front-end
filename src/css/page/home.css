@@ -170,6 +170,24 @@ footer{
     margin-right: 25px;
 }
 
+#dropDown{
+    content: '';
+    width: fit-content;
+    height: fit-content;
+    align-self: flex-end;
+    position: absolute;
+    top: 180px;
+    margin-right: 120px;
+    display: none;
+    transition-duration: 1000ms;
+    transition-timing-function: ease-in-out;
+    transition-property: all;
+}
+
+form{
+    height: 600px;
+    width: 600px;
+}
 
 /*Media Queries*/
 @media (min-width: 568px) {

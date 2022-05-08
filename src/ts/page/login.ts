@@ -3,6 +3,7 @@ const txtEmail = document.querySelector<HTMLInputElement>('#txt-email')!;
 const txtRegisterNew = document.querySelector<HTMLParagraphElement>('#register-new a')!;
 const btnSignIn = document.querySelector<HTMLParagraphElement>('#btn-signIn')!;
 
+
 txtPassword.addEventListener('input',validateInputs);
 txtEmail.addEventListener('input',validateInputs);
 
