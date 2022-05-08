@@ -24,3 +24,7 @@ function validateInputs(this:HTMLInputElement,e:Event){
         txtPassword.value===txtRetypePassword.value ? txtRetypePassword.classList.add('is-valid'):txtRetypePassword.classList.add('is-invalid');
     }
 }
+
+alreadyMember.addEventListener('click',()=>{
+    document.location.replace('login.html');
+});
