@@ -49,6 +49,28 @@
                         <h1 class="m-0">TODO-LIST</h1><br><br>
 
                         <button id="btn-add" type="submit" href="#">+ADD</button>
+                        <div id="dropDown" class="col-md-6 card-body">
+                            <form action="#" method="post">
+                                <div class="input-group mb-3">
+                                    <input id="txt-date" type="date" class="form-control" placeholder="Date">
+
+                                </div>
+                                <div class="input-group mb-3">
+                                    <input id="txt-task" type="text" class="form-control" placeholder="Task">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <input id="txt-description" type="text" class="form-control" placeholder="Description">
+                                </div>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <button id="dropDownSave" type="button" class="btn btn-primary btn-block">Save</button>
+                                    </div>
+                                    <div class="col-4">
+                                        <button id="btnReset" type="reset" class="btn btn-primary btn-block">Reset</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                         <!--            =================================================================================================-->
                         <div class="main-block">
                             <table id="tbl-left" class="table table-hover text-nowrap">
@@ -135,18 +157,6 @@
 
                             </table>
                         </div>
-
-                        <!--            <ul class="paginationMem">-->
-                        <!--              <li class="paginate_button page-item previous disabled" id="example2_previous"><a href="#" aria-controls="example2" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li>-->
-                        <!--              <li class="paginate_button page-item active"><a href="#" aria-controls="example2" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>-->
-                        <!--              <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="2" tabindex="0" class="page-link">2</a></li>-->
-                        <!--              <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="3" tabindex="0" class="page-link">3</a></li>-->
-                        <!--              <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="4" tabindex="0" class="page-link">4</a></li>-->
-                        <!--              <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="5" tabindex="0" class="page-link">5</a></li>-->
-                        <!--              <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="6" tabindex="0" class="page-link">6</a></li>-->
-                        <!--              <li class="paginate_button page-item next" id="example2_next"><a href="#" aria-controls="example2" data-dt-idx="7" tabindex="0" class="page-link">Next</a></li>-->
-                        <!--            </ul>-->
-
                     </div><!-- /.col -->
                 </div><!-- /.row -->
             </div><!-- /.container-fluid -->
