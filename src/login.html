@@ -24,6 +24,9 @@
   <script defer type="module" src="/node_modules/admin-lte/dist/js/adminlte.min.js"></script>
   <script defer type="module" src="ts/main.ts"></script>
   <script defer type="module" src="ts/page/login.ts"></script>
+  <script defer type="module" src="/src/ts/main.ts"></script>
+  <script defer type="module" src="/src/ts/page/login.ts"></script>
+
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
@@ -37,7 +40,7 @@
 
       <form action="#" method="POST">
         <div class="input-group mb-3">
-          <input type="email" class="form-control" placeholder="Email">
+          <input id="txt-email" type="email" class="form-control" placeholder="Email">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -45,7 +48,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password">
+          <input id="txt-password" type="password" class="form-control" placeholder="Password">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -63,15 +66,16 @@
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+            <button id="btn-signIn" type="submit" class="btn btn-primary btn-block">Sign In</button>
           </div>
           <!-- /.col -->
         </div>
       </form>
 
-      <p class="mb-0">
-        <a href="register.html" class="text-center">Register a new user</a>
+      <p id="register-new" class="mb-0">
+        <a href="#" class="text-center">Register a new user</a>
       </p>
+
     </div>
     <!-- /.card-body -->
   </div>
