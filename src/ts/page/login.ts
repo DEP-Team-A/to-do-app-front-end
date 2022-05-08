@@ -24,3 +24,11 @@ function validateInputs(this:HTMLInputElement,e:Event){
     }
 
 }
+
+txtRegisterNew.addEventListener('click',(e)=>{
+    document.location.replace('register.html');
+});
+
+btnSignIn.addEventListener('click',()=>{
+   /*TODO:connect with the backend*/
+});
