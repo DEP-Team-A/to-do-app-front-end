@@ -98,3 +98,4 @@ btnDropDownSave.addEventListener('click',()=>{
 
 });
 
+declare const Swal:any;
