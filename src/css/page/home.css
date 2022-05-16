@@ -198,7 +198,13 @@ tbody > tr:hover{
 .is-selected{
     background-color: darkcyan;
 }
-
+#btn-remove{
+    width: 200px;
+    position: absolute;
+    top: 85%;
+    left: 90%;
+    display: none;
+}
 
 /*Media Queries*/
 @media (min-width: 568px) {
