@@ -6,7 +6,7 @@ const btnDropDownSave = document.querySelector<HTMLButtonElement>('#dropDownSave
 const date = document.querySelector<HTMLInputElement>('#txt-date')!;
 const task = document.querySelector<HTMLInputElement>('#txt-task')!;
 const description = document.querySelector<HTMLInputElement>('#txt-description')!;
-
+const rows = document.querySelectorAll<HTMLTableRowElement>('tbody > tr')!;
 
 tblLeft.addEventListener('click',removeTask);
 tblRight.addEventListener('click',addTasks);
@@ -91,6 +91,9 @@ btnDropDownSave.addEventListener('click',()=>{
                            </td>`;
 
     tblLeft.querySelector('tbody')!.append(newRow);
+    newRow.addEventListener('click',()=>{
+
+    });
     dropdown.style.display='none';
     btnAdd.innerText='+ADD';
 
@@ -99,3 +102,17 @@ btnDropDownSave.addEventListener('click',()=>{
 });
 
 declare const Swal:any;
+
+tblLeft.addEventListener('click',selectRows);
+tblRight.addEventListener('click',selectRows);
+
+function selectRows(e:Event){
+    e.stopPropagation();
+   const ele=e.target as HTMLElement;
+   const tblRow = ele.closest<HTMLTableRowElement>('tr')!;
+   tblLeft.querySelectorAll('tr').forEach((value, key) => value.classList.remove('is-selected'));
+   tblRight.querySelectorAll('tr').forEach((value, key) => value.classList.remove('is-selected'));
+   tblRow.classList.add('is-selected');
+}
+
+
