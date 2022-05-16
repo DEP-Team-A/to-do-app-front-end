@@ -6,7 +6,8 @@ const btnDropDownSave = document.querySelector<HTMLButtonElement>('#dropDownSave
 const date = document.querySelector<HTMLInputElement>('#txt-date')!;
 const task = document.querySelector<HTMLInputElement>('#txt-task')!;
 const description = document.querySelector<HTMLInputElement>('#txt-description')!;
-
+const rows = document.querySelectorAll<HTMLTableRowElement>('tbody > tr')!;
+const btnRemove = document.querySelector<HTMLButtonElement>('#btn-remove')!;
 
 tblLeft.addEventListener('click',removeTask);
 tblRight.addEventListener('click',addTasks);
@@ -91,6 +92,9 @@ btnDropDownSave.addEventListener('click',()=>{
                            </td>`;
 
     tblLeft.querySelector('tbody')!.append(newRow);
+    newRow.addEventListener('click',()=>{
+
+    });
     dropdown.style.display='none';
     btnAdd.innerText='+ADD';
 
@@ -99,3 +103,54 @@ btnDropDownSave.addEventListener('click',()=>{
 });
 
 declare const Swal:any;
+
+tblLeft.addEventListener('click',selectRows);
+tblRight.addEventListener('click',selectRows);
+
+function selectRows(e:Event){
+    e.stopPropagation();
+   const ele=e.target as HTMLElement;
+   const tblRow = ele.closest<HTMLTableRowElement>('tr')!;
+   tblLeft.querySelectorAll('tr').forEach((value, key) => value.classList.remove('is-selected'));
+   tblRight.querySelectorAll('tr').forEach((value, key) => value.classList.remove('is-selected'));
+   tblRow.classList.add('is-selected');
+};
+
+btnRemove.addEventListener('click',()=>{
+    let selectedElm:HTMLTableRowElement;
+    for (const node of tblLeft.querySelectorAll('tr')) {
+        if (node.classList.contains('is-selected')){
+            selectedElm=node;
+            break;
+        }
+    }
+    if (!selectedElm){
+        for (const node of tblRight.querySelectorAll('tr')) {
+            if (node.classList.contains('is-selected')){
+                selectedElm=node;
+                break;
+            }
+        }
+    }
+    if (selectedElm){
+        const promise = Swal.fire({
+            title: 'Confirm?',
+            text: `Are you sure to delete the task?`,
+            icon: 'question',
+            confirmButtonText: 'Yes',
+            denyButtonText: 'No',
+            showDenyButton: true
+        }) as Promise<any>;
+        promise.then((resolve)=>{
+            if (resolve.isConfirmed){
+                selectedElm.remove();
+            }
+        });
+    }else {
+        Swal.fire({
+            title: 'Error',
+            text: `Please select a task first!`,
+            confirmButtonText: 'Yes',
+        })
+    }
+});

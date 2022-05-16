@@ -182,11 +182,27 @@ footer{
     transition-duration: 1000ms;
     transition-timing-function: ease-in-out;
     transition-property: all;
+    z-index: 2;
 }
 
 form{
     height: 600px;
     width: 600px;
+}
+
+tbody > tr:hover{
+    cursor: pointer;
+    background-color: darkcyan;
+}
+
+.is-selected{
+    background-color: darkcyan;
+}
+#btn-remove{
+    width: 200px;
+    position: absolute;
+    top: 85%;
+    left: 90%;
 }
 
 /*Media Queries*/
