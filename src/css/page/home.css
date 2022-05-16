@@ -203,7 +203,6 @@ tbody > tr:hover{
     position: absolute;
     top: 85%;
     left: 90%;
-    display: none;
 }
 
 /*Media Queries*/
